@@ -1,7 +1,3 @@
-test = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"
-test2 = "Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red"
-
-# Returns True possible, or false else
 def get_power(game_str):
     reds, greens, blues = (0,0,0)
     rounds = game_str.strip().partition(": ")[2].split("; ")
@@ -12,7 +8,6 @@ def get_power(game_str):
             if "green" in color: greens = max(int(color.split(" ")[0]), greens)
             if "blue" in color: blues = max(int(color.split(" ")[0]), blues)
     return reds*greens*blues
-
 
 sum = 0
 with open("02-1/input.txt") as f:

@@ -1,9 +1,5 @@
 nums = {"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9}
 
-test1 = "oneight"
-test2 = "fourthreejlgk6four"
-test3 = "1four2"
-
 def get_value(input_str):
     first_index = 10000
     last_index = 10000
@@ -23,7 +19,7 @@ def get_value(input_str):
             last_index = idx
             last_num = nums[key]
 
-
+    # Now check for letter words around the two digits ( if there are none, check everything ) Regex again probably better
     for i, letter in enumerate(input_str[0:first_index]):
         if letter.isdigit(): 
             first_index = i
